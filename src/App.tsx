@@ -19,8 +19,6 @@ class App extends Component<MyProps> {
 
     const endpoint = process.env.REACT_APP_API || 'http://localhost:5000'
 
-    console.log(endpoint)
-
     client.setEndpoint(`${endpoint}/graphql`);
 
     const categoryPaths = categories.reduce((paths: string[], currentPath) => {
