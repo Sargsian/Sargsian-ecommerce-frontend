@@ -1,0 +1,34 @@
+.container {
+  display: flex;
+  flex-direction: column;
+
+  h1 {
+    font-size: 4rem;
+    font-weight: 400;
+    margin-bottom: 8rem;
+    text-transform: capitalize;
+  }
+}
+
+.productList {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, min(386px));
+  gap: 4rem;
+}
+
+.loadMore {
+  margin: auto;
+  margin-top: 5rem;
+  width: 14rem;
+  height: 4.3rem;
+  cursor: pointer;
+  background: none;
+  padding: 1.3rem 0;
+  font: inherit;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #1d1f22;
+  border: 1px solid #1d1f22;
+}

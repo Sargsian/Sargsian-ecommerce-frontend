@@ -1,0 +1,45 @@
+.burger {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  padding-left: 2.5rem;
+  background-color: white;
+  z-index: 4;
+
+  @media screen and (max-width: 1000px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .lines {
+    position: absolute;
+    cursor: pointer;
+  }
+
+  .lines div {
+    top: 50%;
+    width: 2.3rem;
+    height: 0.3rem;
+    background-color: #2b2b2b;
+    margin: 0.5rem 0;
+    transition: all 0.3s ease;
+  }
+}
+
+.toggle {
+  transition: left 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+
+  & .line1 {
+    transform: rotate(-45deg) translate(-0.5rem, 0.6rem);
+  }
+  & .line2 {
+    opacity: 0;
+  }
+  & .line3 {
+    transform: rotate(45deg) translate(-0.5rem, -0.6rem);
+  }
+}

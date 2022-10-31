@@ -1,0 +1,76 @@
+.attributes {
+  width: 13.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+.title {
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: #1d1f22;
+  h2 {
+    font: inherit;
+    line-height: 2.6rem;
+    display: inline-block;
+  }
+  span {
+    display: inline-block;
+    margin-top: 0.4rem;
+    font-weight: 500;
+  }
+}
+
+.size {
+  & > span {
+    display: inline-block;
+    margin-bottom: 0.8rem;
+  }
+  div {
+    display: flex;
+    gap: 0.8rem;
+  }
+}
+
+.sizeIcon {
+  width: 2.4rem;
+  height: 2.4rem;
+  border: 1px solid black;
+  position: relative;
+  font-family: inherit;
+  &::before {
+    font-size: 1.4rem;
+    content: attr(data-title);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-47%, -50%);
+  }
+}
+
+.pageAttributes {
+  width: unset;
+
+  .title {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #1d1f22;
+
+    h2 {
+      font: inherit;
+      font-weight: 400;
+    }
+
+    h2:first-child {
+      font-weight: 600;
+      margin-bottom: 1.6rem;
+    }
+    span {
+      font-weight: 700;
+      font-size: 2.4rem;
+      margin: 2rem 0;
+    }
+  }
+}

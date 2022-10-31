@@ -1,0 +1,84 @@
+.wrapper {
+  width: 100%;
+
+  h1 {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 3.2rem;
+    color: #1d1f22;
+    margin-bottom: 5.5rem;
+  }
+  h1 + div {
+    border-top: 1px solid #e5e5e5;
+  }
+}
+
+.product {
+  width: 100%;
+  padding: 2.4rem 0;
+  border-bottom: 1px solid #e5e5e5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.actions {
+  display: flex;
+  gap: 2.4rem;
+  align-items: center;
+  height: 28.8rem;
+}
+
+.orderDetails {
+  margin-top: 3.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  width: 27.9rem;
+  table {
+    font-size: 2.4rem;
+    color: #1d1f22;
+    tr:not(:last-child) > td {
+      padding-bottom: 0.8rem;
+    }
+    td:last-child {
+      font-weight: 700;
+    }
+  }
+  button {
+    font: inherit;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding: 1.3rem 0;
+    border: none;
+    color: white;
+    background: #5ece7b;
+    cursor: pointer;
+  }
+}
+
+.cartNote {
+  font-size: 2rem;
+  text-align: center;
+  opacity: .6;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 800px) {
+  .product {
+    padding: 5rem;
+    flex-direction: column;
+    & > div:first-child {
+      order: 2;
+    }
+    gap: 4rem;
+  }
+  .actions {
+    flex-direction: row-reverse;
+  }
+  .orderDetails {
+    margin: auto;
+    margin-top: 5rem;
+  }
+}

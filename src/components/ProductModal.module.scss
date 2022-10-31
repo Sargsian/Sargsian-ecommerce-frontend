@@ -1,0 +1,56 @@
+.productModal {
+  display: flex;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  gap: 8rem;
+  padding: 2.4rem;
+  position: relative;
+
+  button {
+    margin: 0;
+    z-index: 2;
+  }
+  & > button {
+    background: none;
+    border: none;
+    position: absolute;
+    width: 2.5rem;
+    height: 2.5rem;
+    top: 2.4rem;
+    cursor: pointer;
+    right: 2.4rem;
+    :hover {
+      opacity: 0.7;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.actions {
+  display: flex;
+  gap: 2.4rem;
+  align-items: center;
+  height: 28.8rem;
+}
+
+@media screen and (max-width: 700px) {
+  .productModal {
+    gap: 2rem;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+    min-width: 35rem;
+    height: 80vh;
+    .actions  {
+      flex-shrink: 0;
+      height: 26rem;
+    }
+
+    & > div:first-of-type {
+      order: 2;
+    }
+  }
+}

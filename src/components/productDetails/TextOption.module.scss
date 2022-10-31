@@ -1,0 +1,46 @@
+.options {
+
+  margin-bottom: 2.4rem;
+
+  & > span {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    margin-bottom: 0.8rem;
+  }
+
+  div {
+    display: flex;
+    gap: 1.2rem;
+
+    label {
+      position: relative;
+    }
+
+    input {
+      position: absolute;
+      width: 6.3rem;
+      height: 4.5rem;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 6.3rem;
+      height: 4.5rem;
+      font-size: 1.6rem;
+      border: 1px solid black;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+
+    input:checked + span {
+      color: white;
+      background-color: black;
+    }
+  }
+}

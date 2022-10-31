@@ -1,0 +1,42 @@
+.color {
+  margin-bottom: 2.4rem;
+
+  & > span {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    margin-bottom: 0.8rem;
+  }
+  div {
+    display: flex;
+    gap: 0.8rem;
+
+    label {
+      position: relative;
+    }
+
+    input {
+      cursor: pointer;
+      position: absolute;
+      width: 3.2rem;
+      height: 3.2rem;
+      opacity: 0;
+    }
+    span {
+      width: 3.2rem;
+      height: 3.2rem;
+      display: inline-block;
+      outline-offset: 1px;
+      outline: none;
+    }
+    input:checked + span {
+      outline: 1px solid #5ece7b;
+      border: none !important // need important to beat inline border;
+    }
+  }
+}
+
+.selected {
+  outline: 1px solid #5ece7b;
+}

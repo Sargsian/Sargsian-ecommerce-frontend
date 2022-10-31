@@ -1,0 +1,52 @@
+.cartOptions {
+ 
+  & > span {
+    display: inline-block;
+    margin-bottom: 0.8rem;
+    font-weight: 400;
+    font-size: 1.4rem;
+    text-transform: capitalize;
+  }
+
+  div {
+    display: flex;
+    gap: 0.8rem;
+
+    span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid black;
+      width: 4.8rem;
+      height: 2.5rem;
+      font-size: 1.4rem;
+      font-weight: 400;
+      text-transform: capitalize;
+    }
+  }
+}
+
+.checked {
+  color: white;
+  background-color: black;
+}
+
+
+.pageCartOptions {
+  margin-bottom: 1.6rem;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  & > span {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  div {
+    span {
+      width: 6.3rem;
+      height: 4.5rem;
+      font-size: 1.6rem;
+    }
+  }
+}

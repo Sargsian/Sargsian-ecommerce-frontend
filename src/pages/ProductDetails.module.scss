@@ -1,0 +1,145 @@
+.container {
+  height: 59.5rem;
+  display: flex;
+}
+
+.slides {
+  width: 8rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  margin-right: 4rem;
+}
+
+.slide {
+  width: 8rem;
+  height: 8rem;
+  min-height: 8rem;
+  cursor: pointer;
+  position: relative;
+  img {
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+}
+
+.imagePreview {
+  width: 61rem;
+  min-width: 61rem;
+  height: 51.1rem;
+  margin-right: 10rem;
+}
+
+.details {
+  width: 29.2rem;
+  height: 59.5rem;
+}
+
+.stdRatio {
+  position: relative;
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    overflow: hidden;
+  }
+}
+
+.skeletonAnimation {
+  opacity: .15;
+  background-color: #e2e5e7;
+  background-image: linear-gradient(
+    90deg,
+    rgba(#fff, 0),
+    rgba(#fff, 0.5),
+    rgba(#fff, 0)
+  );
+  background-size: 50% 100%;
+  background-repeat: no-repeat;
+  background-position: left -50% top 0;
+  animation: shine 1s ease infinite;
+}
+
+@keyframes shine {
+  to {
+    background-position: right -100% top 0;
+  }
+}
+
+@media screen and (max-width: 1310px) {
+  .container {
+    justify-content: center;
+    .imagePreview {
+      width: 50rem;
+      min-width: 50rem;
+      margin-right: 3rem;
+      // height: auto;
+    }
+    .slides {
+      margin-right: 3rem;
+    }
+  }
+}
+
+@media screen and (max-width: 1135px) {
+  .container {
+    flex-wrap: wrap;
+    justify-content: unset;
+  }
+  .imagePreview {
+    margin: 0 auto;
+    order: 1;
+  }
+  .details {
+    margin: 0 auto;
+    order: 2;
+  }
+  .slides {
+    order: 3;
+    flex-direction: row;
+    width: 50rem;
+    height: auto;
+    margin: 0;
+    flex-wrap: wrap;
+    gap: 3rem;
+    padding-bottom: 4rem;
+  }
+}
+
+@media screen and (max-width: 1030px) {
+  .container {
+    align-items: center;
+    flex-wrap: unset;
+    flex-direction: column;
+    height: auto;
+    gap: 5rem;
+  }
+  .imagePreview {
+    margin: 0 !important;
+    order: 1;
+  }
+  .slides {
+    margin: 0 !important;
+    order: 2;
+    padding-bottom: 0;
+    gap: 0.5rem;
+    justify-content: center;
+    width: auto;
+  }
+  .details {
+    order: 3;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .imagePreview {
+    width: 35rem !important;
+    min-width: 35rem !important;
+  }
+}

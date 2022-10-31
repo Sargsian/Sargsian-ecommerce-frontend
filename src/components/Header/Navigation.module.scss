@@ -1,0 +1,116 @@
+.navigation {
+  font-size: 1.6rem;
+  height: 100%;
+  display: flex;
+  line-height: 8rem;
+
+  a {
+    text-decoration: none;
+    color: #1d1f22;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin: 0 1.6rem;
+    position: relative;
+
+    &:hover {
+      color: #5ece7c00;
+    }
+    &:hover::before {
+      content: attr(title);
+      color: #5ece7b;
+      font-weight: 500;
+      position: absolute;
+    }
+
+    &:hover::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 2px;
+      width: calc(100% + 3.2rem);
+      background-color: #5ece7b;
+    }
+  }
+}
+
+.activeLink {
+  color: rgba(255, 255, 255, 0) !important;
+  &::before {
+    content: attr(title);
+    color: #5ece7b;
+    font-weight: 500;
+    position: absolute;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2px;
+    width: calc(100% + 3.2rem);
+    background-color: #5ece7b;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .navigation {
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    bottom: calc(100% - 8rem);
+    left: 0;
+    padding: 0 3rem;
+    background-color: white;
+    height: unset;
+    line-height: 100%;
+    transition: transform 0.1s ease-in;
+
+    z-index: 2;
+
+    a {
+      margin: 1.6rem 0;
+
+      &:hover::after {
+        content: none;
+      }
+    }
+
+    .activeLink {
+      color: rgba(255, 255, 255, 0) !important;
+      &::before {
+        content: attr(title);
+        color: #5ece7b;
+        font-weight: 500;
+        position: absolute;
+      }
+      &::after {
+        content: none;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 2px;
+        width: calc(100% + 3.2rem);
+        background-color: #5ece7b;
+      }
+    }
+
+    &::after {
+      content: '';
+      padding: 0;
+      left: 0;
+      bottom: -3px;
+      width: 100%;
+      height: 3px;
+      position: absolute;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.08), transparent);
+    }
+  }
+
+  .mobileActive {
+    transform: translateY(100%);
+  }
+}
