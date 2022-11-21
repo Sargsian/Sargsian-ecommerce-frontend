@@ -1,6 +1,7 @@
 # Minimalistic Ecommerce frontend project
 
-## Address https://ecommerce-client.onrender.com/
+## <a href="https://ecommerce-client.onrender.com/" target="_blank">Go to Project!</a>
+
 *Note: it might take a few seconds for the backend to spin up on first load, for this case too, i implemented a loading skeleton as a side feature*
 
 * The projct was built as a test assignment using React, Typescript, GraphQL, Redux toolkit. The interaction with backend is implemented with RTK Query and Opus(lightweight GraphQL client similar to Apollo).
