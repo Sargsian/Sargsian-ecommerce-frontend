@@ -1,6 +1,6 @@
 # Minimalistic Ecommerce frontend project
 
-## <a href="https://ecommerce-client.onrender.com/" target="_blank">Go to Project!</a>
+## <a href="https://ecommerce-client.onrender.com/" target="blank">Go to Project!</a>
 
 *Note: it might take a few seconds for the backend to spin up on first load, for this case too, i implemented a loading skeleton as a side feature*
 
