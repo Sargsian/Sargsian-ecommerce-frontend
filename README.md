@@ -1,6 +1,6 @@
 # Minimalistic Ecommerce frontend project
 
-## [Go to Project](https://ecommerce-client.onrender.com/)
+## [Go to Project!](https://ecommerce-client.onrender.com/)
 
 *Note: it might take a few seconds for the backend to spin up on first load, for this case too, i implemented a loading skeleton as a side feature*
 
