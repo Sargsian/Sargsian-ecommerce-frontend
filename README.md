@@ -1,4 +1,4 @@
-# Minimalistic Ecommerce frontend project
+# Minimalistic ecommerce frontend project
 
 ## [Go to Project!](https://ecommerce-client.onrender.com/)
 
